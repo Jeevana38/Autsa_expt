@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Autism Social Aid - Real-Time</title>
+
+  <!-- Bootstrap + FontAwesome + SweetAlert2 -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css">
+
+  <!-- Custom CSS -->
+  <!--<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>-->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+
+
+
+  
+  
+ 
+</head><script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+
+<body>
+
+<div class="container mt-5">
+  <div class="card p-4 shadow-lg">
+    <h2 class="text-center text-primary mb-4">🎥 Autism Social Aid - Live Camera</h2>
+
+    <video id="video" autoplay muted playsinline></video>
+
+    <div class="text-center mt-4">
+      <button id="startRecord" class="btn btn-primary btn-lg mr-2">Start Recording</button>
+      <button id="stopRecord" class="btn btn-danger btn-lg" disabled>Stop & Analyze</button>
+    </div>
+
+    <div id="recordingTime" class="text-center text-muted mt-3" style="display:none;"></div>
+
+    <div id="loadingSpinner" class="text-center mt-5" style="display:none;">
+      <div class="spinner-border text-primary" role="status"></div>
+      <p class="mt-2">Processing your video...</p>
+    </div>
+
+    <div id="result" class="mt-5" style="display:none;">
+      <h4>Detected Emotion:</h4>
+      <p id="emotion" class="lead font-weight-bold"></p>
+
+      <h5 class="mt-4 text-primary">Original Text:</h5>
+      <p id="originalText" class="text-muted"></p>
+
+      <h5 class="mt-4 text-primary">Simplified Text:</h5>
+      <p id="simplifiedText" class="text-muted"></p>
+
+      <h5 class="mt-4 text-primary">Suggested Replies:</h5>
+      <ul id="suggestedReplies" class="list-group mb-4"></ul>
+
+      <h5 class="mt-4 text-primary">Simplified Speech Output:</h5>
+      <audio id="audioOutput" controls class="w-100 mt-2"></audio>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap + SweetAlert2 + Custom JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>

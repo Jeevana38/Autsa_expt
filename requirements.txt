@@ -1,0 +1,16 @@
+Flask
+opencv-python
+numpy
+moviepy
+SpeechRecognition
+gtts
+deepface
+openai
+moviepy==1.0.0
+transformers
+torch
+torchvision
+SentencePiece
+tf-keras
+openai==0.28
+python-dotenv
